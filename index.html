@@ -603,28 +603,21 @@ h4 {
   filter: sepia(40%) saturate(80%);
 }
 
-/* ── GLOBAL LOGO ── */
+/* ── GLOBAL LOGO WATERMARK ── */
 #global-logo {
-  position: fixed; top: 14px; left: 14px; z-index: 500;
-  display: flex; align-items: center; gap: 10px;
+  position: fixed; top: 10px; left: 10px; z-index: 500;
+  display: flex; align-items: center;
   pointer-events: none;
+  opacity: 0.18;
+  mix-blend-mode: multiply;
+  filter: grayscale(30%) sepia(20%);
+  transition: opacity 0.4s ease;
+}
+#global-logo:hover {
+  opacity: 0.35;
 }
 #global-logo img {
-  height: 52px; width: auto;
-  filter: drop-shadow(0 2px 8px rgba(139,90,10,0.35));
-  opacity: 0.92;
-}
-#global-logo .logo-text {
-  display: flex; flex-direction: column; line-height: 1.2;
-}
-#global-logo .logo-title {
-  font-family: 'Cinzel', serif; font-size: 13px;
-  font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
-  color: #7a4d0a;
-}
-#global-logo .logo-sub {
-  font-family: 'Raleway', sans-serif; font-size: 10px;
-  letter-spacing: 2px; color: #b07030; text-transform: lowercase;
+  height: 56px; width: auto;
 }
 
 /* ── ADJUST SIDEBAR FOR LIGHT ── */
